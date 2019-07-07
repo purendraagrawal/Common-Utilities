@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class CompareTwoFiles {
+public class CompareTwoTextFiles {
 	/**
 	 * Validate two file and Ignore the casing.
 	 * 
@@ -18,6 +18,9 @@ public class CompareTwoFiles {
 	 *             {@link NullPointerException}
 	 *
 	 */
+	private CompareTwoTextFiles() {
+	}
+
 	public static boolean validateTwoFiles(final String filePath1, final String filePath2) throws IOException {
 		try (BufferedReader reader1 = new BufferedReader(new FileReader(new File(filePath1)));
 				BufferedReader reader2 = new BufferedReader(new FileReader(new File(filePath2)));) {
