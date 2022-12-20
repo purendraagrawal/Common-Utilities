@@ -80,7 +80,7 @@ public class CompareExcelFiles {
 	private static String getCellValue(XSSFCell cell) {
 		if (null == cell)
 			return null;
-		switch (cell.getCellTypeEnum()) {
+		switch (cell.getCellType()) {
 		case BLANK:
 			return "";
 		case BOOLEAN:
@@ -88,7 +88,7 @@ public class CompareExcelFiles {
 		case NUMERIC:
 			return String.valueOf(cell.getNumericCellValue());
 		case FORMULA:
-			switch (cell.getCachedFormulaResultTypeEnum()) {
+			switch (cell.getCachedFormulaResultType()) {
 			case BLANK:
 				return "";
 			case BOOLEAN:

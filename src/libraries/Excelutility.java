@@ -61,7 +61,7 @@ public class Excelutility {
 	private static String getCellValue(XSSFCell cell) {
 		if (null == cell)
 			return null;
-		switch (cell.getCellTypeEnum()) {
+		switch (cell.getCellType()) {
 		case BLANK:
 			return null;
 		case BOOLEAN:
@@ -69,7 +69,7 @@ public class Excelutility {
 		case NUMERIC:
 			return String.valueOf(cell.getNumericCellValue());
 		case FORMULA:
-			switch (cell.getCachedFormulaResultTypeEnum()) {
+			switch (cell.getCachedFormulaResultType()) {
 			case BLANK:
 				return null;
 			case BOOLEAN:
